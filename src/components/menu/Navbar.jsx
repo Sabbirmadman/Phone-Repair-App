@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import { MenuOutlined } from "@ant-design/icons";
 import { HiLocationMarker } from "react-icons/hi";
 import { Drawer } from "antd";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
     const [headerState, setHeaderState] = useState({
         current: "Home",
         visible: false,
     });
+
+    const navigate = useNavigate();
 
     const showDrawer = () => {
         setHeaderState({
@@ -33,6 +36,7 @@ const Navbar = () => {
             <img
                 src="https://static.wixstatic.com/media/99b596_1e1edcabb3b94cfd8e8b942058a2db07~mv2.png/v1/fill/w_184,h_51,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/logo.png"
                 alt="logo"
+                onClick={() => navigate("/")}
             />
 
             {/* for mobile */}
@@ -125,7 +129,10 @@ const Navbar = () => {
                         className={`mr-8 cursor-pointer text-xl ${
                             headerState.current === "Home" ? "selected" : ""
                         }`}
-                        onClick={() => handleClick({ key: "Home" })}
+                        onClick={() => {
+                            handleClick({ key: "Home" });
+                            navigate("/");
+                        }}
                     >
                         Home
                     </li>

@@ -1,7 +1,9 @@
 import React from "react";
 import { catagoryTypes } from "../../data";
+import { useNavigate } from "react-router-dom";
 
 export default function FixListComponent() {
+    const navigate = useNavigate();
     return (
         <div>
             <div className="flex flex-col items-center justify-center h-48 text-center relative">
@@ -36,7 +38,12 @@ export default function FixListComponent() {
                             <h1 className="text-2xl font-bold uppercase text-white">
                                 {item.name}
                             </h1>
-                            <button className="px-10 py-2 text-white uppercase bg-[#ff4040] rounded-full hover:bg-black transition duration-300 ease-in-out borderImage">
+                            <button
+                                onClick={() => {
+                                    navigate(`/repair/${item.name}`);
+                                }}
+                                className="px-10 py-2 text-white uppercase bg-[#ff4040] rounded-full hover:bg-black transition duration-300 ease-in-out borderImage"
+                            >
                                 Repair Now {">"}
                             </button>
                         </div>
