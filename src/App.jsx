@@ -5,17 +5,21 @@ import Navbar from "./components/menu/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import OutletPage from "./pages/OutletPage";
 import HomePage from "./pages/HomePage";
+import CatagoryPage from "./pages/CatagoryPage";
+import PhoneRepairPage from "./pages/PhoneRepairPage";
 
 function App() {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<OutletPage />}>
-                    <Route index element={<HomePage />} />
-                </Route>
-            </Routes>
-        </BrowserRouter>
-    );
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<OutletPage />}>
+          <Route index element={<HomePage />} />
+          <Route path="repair/:phone" element={<CatagoryPage />} />
+          <Route path="repair/:phone/:model" element={<PhoneRepairPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
