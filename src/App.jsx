@@ -7,6 +7,7 @@ import OutletPage from "./pages/OutletPage";
 import HomePage from "./pages/HomePage";
 import CatagoryPage from "./pages/CatagoryPage";
 import PhoneRepairPage from "./pages/PhoneRepairPage";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<OutletPage />}>
           <Route index element={<HomePage />} />
           <Route path="repair/:phone" element={<CatagoryPage />} />
+          <Route path="about" element={<AboutPage />} />
           <Route path="repair/:phone/:model" element={<PhoneRepairPage />} />
         </Route>
       </Routes>
