@@ -40,7 +40,7 @@ export default function ChoosingUs() {
         </h3>
       </div>
 
-      <div className="flex justify-center w-full gap-4 ">
+      <div className="md:flex justify-center w-full gap-4 ">
         {chooseData.map((ele) => (
           <div
             key={ele.id}

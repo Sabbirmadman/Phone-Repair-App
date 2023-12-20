@@ -3,7 +3,7 @@ import InputComponent from "./InputComponent";
 
 export default function ContactUsComponent() {
   return (
-    <div className="bg-[#efeff4] h-[53rem] flex justify-center items-center">
+    <div className="bg-[#efeff4] min-h-[53rem] flex flex-col md:flex-row justify-center items-center">
       <div className=" w-[30rem] h-[42rem] bg-white p-8 text-[#797676]">
         <h1 className="text-4xl font-semibold py-4">Get In Tuch</h1>
 

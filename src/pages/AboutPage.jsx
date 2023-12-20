@@ -1,5 +1,7 @@
 import React from "react";
 
+import { ArrowRightOutlined } from "@ant-design/icons";
+
 export default function AboutPage() {
   return (
     <div>
@@ -16,7 +18,7 @@ export default function AboutPage() {
           ABOUT US
         </h1>
       </div>
-      <div className="w-full max-w-5xl mx-auto mb-8">
+      <div className="w-full max-w-5xl mx-auto mb-16">
         <div className="flex flex-col justify-center items-center h-48 text-center relative">
           <h1
             className="text-8xl font-bold uppercase absolute top-4 "
@@ -52,20 +54,22 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-      <div>
-        <div className="flex flex-col justify-center items-center h-48 text-center relative">
-          <h1
-            className="text-8xl font-bold uppercase absolute top-4 "
-            style={{
-              color: "#f2f2f2",
-            }}
-          >
-            TESTIMONIALS
-          </h1>
-          <h3 className="text-4xl font-bold w-96 text-center z-10">
-            WHAT PEOPLE SAY
-          </h3>
-        </div>
+      <div
+        className="h-80 flex flex-col justify-center items-center gap-10"
+        style={{
+          backgroundImage: `url("https://static.wixstatic.com/media/99b596_b745b5934b6943cb959fe80b496642aa~mv2.jpg/v1/fill/w_980,h_319,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/99b596_b745b5934b6943cb959fe80b496642aa~mv2.jpg")`,
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
+        <h1 className="bg-white w-fit px-4 py-2 text-5xl font-semibold">
+          DO YOU NEED ANY REPAIR ?
+        </h1>
+        <button className="carousel-button">
+          <span>Call Us Now</span>
+          <ArrowRightOutlined />
+        </button>
       </div>
     </div>
   );
