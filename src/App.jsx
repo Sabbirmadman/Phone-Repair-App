@@ -8,20 +8,25 @@ import HomePage from "./pages/HomePage";
 import CatagoryPage from "./pages/CatagoryPage";
 import PhoneRepairPage from "./pages/PhoneRepairPage";
 import AboutPage from "./pages/AboutPage";
+import BodyOils from "./pages/BodyOils";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<OutletPage />}>
-          <Route index element={<HomePage />} />
-          <Route path="repair/:phone" element={<CatagoryPage />} />
-          <Route path="about" element={<AboutPage />} />
-          <Route path="repair/:phone/:model" element={<PhoneRepairPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<OutletPage />}>
+                    <Route index element={<HomePage />} />
+                    <Route path="repair/:phone" element={<CatagoryPage />} />
+                    <Route path="about" element={<AboutPage />} />
+                    <Route path="bodyoils" element={<BodyOils />} />
+                    <Route
+                        path="repair/:phone/:model"
+                        element={<PhoneRepairPage />}
+                    />
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default App;
