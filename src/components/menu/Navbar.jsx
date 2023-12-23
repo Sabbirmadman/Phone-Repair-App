@@ -158,12 +158,30 @@ const Navbar = () => {
                     </li>
 
                     <li
-                        className={`mr-8 cursor-pointer text-xl ${
+                        className={`mr-8 cursor-pointer text-xl relative group   ${
                             headerState.current === "Services" ? "selected" : ""
                         }`}
                         onClick={() => handleClick({ key: "Services" })}
                     >
                         Services
+                        {/*  */}
+                        <div
+                            className={`absolute top-7 left-0 w-[20rem]  bg-black p-4 text-white z-10  hidden group-hover:flex hover:flex flex-col  justify-center gap-2 `}
+                        >
+                            <p className="border-b-4 border-red-700 pb-2 ">
+                                Iphone Repair
+                            </p>
+
+                            <p className="border-b-4 border-red-700 pb-2 ">
+                                Samsung and Android Repair
+                            </p>
+                            <p className="border-b-4 border-red-700 pb-2 ">
+                                Tablet Repair
+                            </p>
+                            <p className="border-b-4 border-red-700 pb-2 ">
+                                Computer Repair
+                            </p>
+                        </div>
                     </li>
 
                     <li
@@ -206,8 +224,14 @@ const Navbar = () => {
 
                     <li className="mr-8">
                         <HiLocationMarker
-                            className="inline-block mr-2"
+                            className="inline-block mr-2 cursor-pointer"
                             size={20}
+                            onClick={() =>
+                                window.open(
+                                    "https://www.google.com/maps/place/Phone+Repair+Hub+-+broken+screen+fix+and+phone+repair+Temple+Hills/@38.8492101,-76.9543853,17z/data=!3m1!4b1!4m6!3m5!1s0x89b7b903c815a8ad:0xeb61560c25c03cd0!8m2!3d38.8492101!4d-76.9543853!16s%2Fg%2F11q29xwld9?entry=ttu",
+                                    "_blank"
+                                )
+                            }
                         />
                     </li>
                 </ul>
